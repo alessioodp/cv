@@ -1,0 +1,122 @@
+body{
+    
+    margin: 0px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 200%;
+    background-color: #d4f3e4;
+}
+
+h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 5.54rem;
+    margin-top: 30px;
+    color: #66BFBF;
+    padding-top: 50px;
+    margin: auto;
+}
+
+h2{
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #66BFBF;
+    font-weight: normal;
+}
+
+h3{
+    color: #11999E;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+
+h4{
+    color: #11999E;
+    font-size: large;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+
+
+.story{
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #66BFBF;
+    font-weight: normal;
+}
+
+.topDiv{
+    padding-top: 50px;
+    background-color: #d4f3e4;
+    position: relative;
+  
+}
+.topCloud{
+    position: absolute;
+    right: 300px;
+}
+.bottomCloud{
+    position: absolute;
+    left: 300px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+
+.imgBody{
+    width: 150px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.bodyDiv{
+    
+    width: 50%;
+    height: auto;
+    background-color: #d4f3e4;
+    margin: auto;
+}
+
+#imgStory{
+    float: right;
+    margin-left: 30px;
+}
+
+p{
+    font-size: 1rem;
+    clear: both;
+}
+
+.inlineText{
+    padding-top: 20px;
+    text-align: left;
+    
+}
+
+.storyText{
+    margin-top: 50px;
+    text-align: left;
+}
+
+.bottomDiv{
+    padding-top: 60px;
+    margin-top: 200px;
+    background-color: #d4f3e4;
+    width: 50%;
+    margin: auto;
+
+}
+
+.socialBottom{
+    
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+
