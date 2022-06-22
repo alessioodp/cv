@@ -5,7 +5,7 @@ body{
     height: 100%;
     font-family: 'Raleway', sans-serif;
     transition: background-image 0.5s;
-    background-image: url("../images/nature.jpeg");
+    background-image: url("images/nature.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
  
@@ -14,7 +14,7 @@ body{
 
 #bkFloor{
     height: 30px;
-    background-image: url("../images/floor.jpeg");
+    background-image: url("images/floor.jpeg");
     background-size: 20px ;
     background-repeat: repeat;
 }
