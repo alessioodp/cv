@@ -7,6 +7,15 @@ const title = document.querySelector("#title")
 const mario = document.querySelector("#marioPg")
 const sky = document.querySelector("#sky")
 const star = document.querySelector("#star")
+const movDiv = document.querySelector("#movDiv")
+const leftBt = document.querySelector("#leftBt")
+const rightBt = document.querySelector("#rightBt")
+const jumpBt = document.querySelector("#jumpBt")
+
+
+
+
+
 devDiv.addEventListener("mouseenter", function(){
     body.style.backgroundImage = "url('images/coding.jpeg')"
     fotoPro.src = "images/cod.jpeg"
@@ -35,7 +44,7 @@ profileTop.addEventListener("mouseover",function(){
 
 let marginLeftPg = 0
 body.addEventListener("keydown", function(e){
-    console.log(e.key)
+  
     switch (e.key) {
         case "d":
             marginLeftPg = marginLeftPg + 50
@@ -82,6 +91,42 @@ function stars(){
 setInterval(() => {
     stars()
 }, 2000);
+
+if (body.offsetWidth > 700){
+    movDiv.style.display = "none"
+}
+
+rightBt.addEventListener("click",function(){
+    marginLeftPg = marginLeftPg + 50
+        if (marginLeftPg > (sky.offsetWidth -50) ){
+            marginLeftPg = sky.offsetWidth - 50
+            mario.style.marginLeft = `${marginLeftPg}px`
+        
+        } else {
+            mario.style.marginLeft = `${marginLeftPg}px`
+ 
+        }
+})
+
+leftBt.addEventListener("click", function(){
+    marginLeftPg = marginLeftPg - 50
+                if (marginLeftPg < 0){
+                    marginLeftPg = 0
+                    mario.style.marginLeft = `0px`
+           
+                }else {
+                    mario.style.marginLeft = `${marginLeftPg}px`
+           
+                }
+})
+
+jumpBt.addEventListener("click",function(){
+    mario.style.marginTop = "50px"
+                setTimeout(()=>{
+                    mario.style.marginTop = "100px"
+                },500)
+})
+
 
 
 
