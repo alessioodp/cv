@@ -11,49 +11,52 @@ const movDiv = document.querySelector("#movDiv")
 const leftBt = document.querySelector("#leftBt")
 const rightBt = document.querySelector("#rightBt")
 const jumpBt = document.querySelector("#jumpBt")
+const score = document.querySelector("#score")
 
-
-
-
+body.style.backgroundImage = "url('images/nature.jpeg')"
+title.style.color = "black"
 
 devDiv.addEventListener("mouseenter", function(){
-    body.style.backgroundImage = "url('images/coding.jpeg')"
+
     fotoPro.src = "images/cod.jpeg"
-    title.style.color = "white"
+   
 })
 
 adminDiv.addEventListener("mouseenter", function(){
-    body.style.backgroundImage = "url('images/admin.jpeg')"
+ 
     fotoPro.src = "images/ad.jpeg"
-    title.style.color = "white"
+   
     
 })
 
 body.addEventListener("mouseenter", function(){
-    body.style.backgroundImage = "url('images/nature.jpeg')"
+    
     fotoPro.src = "images/normal.jpeg"
-    title.style.color = "black"
+    
 })
 
 
 profileTop.addEventListener("mouseover",function(){
-    body.style.backgroundImage = "url('images/nature.jpeg')"
+ 
     fotoPro.src = "images/normal.jpeg"
-    title.style.color = "black"
+   
 })
 
 let marginLeftPg = 0
+var scoreGame = 0
 body.addEventListener("keydown", function(e){
-  
+
     switch (e.key) {
         case "d":
             marginLeftPg = marginLeftPg + 50
             if (marginLeftPg > (sky.offsetWidth -50) ){
                 marginLeftPg = sky.offsetWidth - 50
                 mario.style.marginLeft = `${marginLeftPg}px`
+                mario.src = ("images/mario.png")
             break;
             } else {
                 mario.style.marginLeft = `${marginLeftPg}px`
+                mario.src = ("images/mario.png")
                 break;
             }
             
@@ -62,9 +65,12 @@ body.addEventListener("keydown", function(e){
                 if (marginLeftPg < 0){
                     marginLeftPg = 0
                     mario.style.marginLeft = `0px`
+                    mario.src = ("images/mario.png")
                      break;
+                     
                 }else {
                     mario.style.marginLeft = `${marginLeftPg}px`
+                    mario.src = ("images/mario.png")
                 break;
                 }
                 
@@ -73,11 +79,24 @@ body.addEventListener("keydown", function(e){
                 setTimeout(()=>{
                     mario.style.marginTop = "100px"
                 },500)
+                mario.src = ("images/okeyMario.gif")
+                break;
+        
+        case " ":
+            if (doElsCollide(mario, star)){
+                scoreGame++
+                score.innerHTML = `${scoreGame}`
+                mario.src = ("images/okeyMario.gif")
+                stars()
+            } 
                 break;
         
         default:
             break;
     }
+
+   
+    
 })
 
 function stars(){
@@ -90,13 +109,19 @@ function stars(){
 
 setInterval(() => {
     stars()
-}, 2000);
+}, 4000);
 
 if (body.offsetWidth > 700){
     movDiv.style.display = "none"
 }
 
 rightBt.addEventListener("click",function(){
+    if (doElsCollide(mario, star)){
+        scoreGame++
+        score.innerHTML = `${scoreGame}`
+        mario.src = ("images/okeyMario.gif")
+        stars()
+    } 
     marginLeftPg = marginLeftPg + 50
         if (marginLeftPg > (sky.offsetWidth -50) ){
             marginLeftPg = sky.offsetWidth - 50
@@ -109,6 +134,12 @@ rightBt.addEventListener("click",function(){
 })
 
 leftBt.addEventListener("click", function(){
+    if (doElsCollide(mario, star)){
+        scoreGame++
+        score.innerHTML = `${scoreGame}`
+        mario.src = ("images/okeyMario.gif")
+        stars()
+    } 
     marginLeftPg = marginLeftPg - 50
                 if (marginLeftPg < 0){
                     marginLeftPg = 0
@@ -121,11 +152,31 @@ leftBt.addEventListener("click", function(){
 })
 
 jumpBt.addEventListener("click",function(){
+    if (doElsCollide(mario, star)){
+        scoreGame++
+        score.innerHTML = `${scoreGame}`
+        mario.src = ("images/okeyMario.gif")
+        stars()
+    } 
     mario.style.marginTop = "50px"
                 setTimeout(()=>{
                     mario.style.marginTop = "100px"
                 },500)
 })
+
+doElsCollide = function(el1, el2) {
+    el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
+    el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
+    el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
+    el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
+    
+    return !((el1.offsetBottom < el2.offsetTop) ||
+             (el1.offsetTop > el2.offsetBottom) ||
+             (el1.offsetRight < el2.offsetLeft) ||
+             (el1.offsetLeft > el2.offsetRight))
+};
+
+
 
 
 
