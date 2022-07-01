@@ -116,6 +116,7 @@ if (body.offsetWidth > 700){
 }
 
 rightBt.addEventListener("click",function(){
+    mario.src = ("images/mario.png")
     if (doElsCollide(mario, star)){
         scoreGame++
         score.innerHTML = `${scoreGame}`
@@ -134,6 +135,7 @@ rightBt.addEventListener("click",function(){
 })
 
 leftBt.addEventListener("click", function(){
+    mario.src = ("images/mario.png")
     if (doElsCollide(mario, star)){
         scoreGame++
         score.innerHTML = `${scoreGame}`
@@ -152,6 +154,7 @@ leftBt.addEventListener("click", function(){
 })
 
 jumpBt.addEventListener("click",function(){
+    mario.src = ("images/mario.png")
     if (doElsCollide(mario, star)){
         scoreGame++
         score.innerHTML = `${scoreGame}`
