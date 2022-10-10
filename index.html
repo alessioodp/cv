@@ -4,96 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alessio Del Piccolo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <link rel="icon" href="favicon.ico">
   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
 
-    <div id="top" class="container-fluid text-center mt-4">
-        <div class="row">
-            <div class="col-lg-12">
-                <img id="proFoto" style="border-radius: 100%;" width="10%" height="auto" class="img-thumbnail" src="images/normal.jpeg" alt="profile">
-                <h3 id="title">I am Alessio <br> Welcome to my space</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid mt-5">
-
-        <div class="row">
-            <div id="developerDiv" class="col-lg-6 col-md-6 col-sm-6" style="height: 300px ;" >
-                <div class="container text-center">
-                    <h3>Developer... </h3>
-                </div>
-                
-                <div class="container">
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>Jquery</li>
-                    <li>Swift</li>
-                </ul>
-                </div>
-            </div>
-
-            <div id="designerDiv" class="col-lg-6 col-md-6 col-sm-6">
-                <div class="contariner text-center">
-                <h3>System Admin...</h3>
-                </div>
-                <ul>
-                    <li>Hardware/Software</li>
-                    <li>Problem Analyst</li>
-                    <li>Customer Service</li>
-                    <li>Research</li>
-                    <li>Typing</li>
-                    <li>Windows/Linux/MacOS</li>
-                </ul>
-            </div>
-
-        </div>
+    
+   
+    <img id="death" class="devClass" src="img/deathstar.webp" alt="">
+    
+    <div id="top" class="text-center">
+        <h3 class="pt-5">Welcome to my Website</h3>
+        <h1>Alessio Del Piccolo</h1>
     </div>
     
-    <div class="container-fluid text-center mb-4">
-        
-      
-                <p>contact me :</p>
-                <a href=""><img class="socialBottom img-thumbnail" src="https://media3.giphy.com/media/XEy1qyv7GdLpmqHEPV/giphy.gif?cid=ecf05e470uu11qq7xzjnqjztaf6e9ofr62vkm6i0luj0allq&rid=giphy.gif&ct=g" alt=""></a>
-                <a href=""><img class="socialBottom img-thumbnail" src="https://media0.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47fzcr6bxvydigpkyaikphpnmlnqxkh0k1a7pl6282&rid=giphy.gif&ct=g" alt=""></a>
-                <a href=""><img class="socialBottom img-thumbnail" src="https://media4.giphy.com/media/aOften89vRbG/giphy.gif?cid=ecf05e47qi71lh3naif10a2ztoq9p36ye6o4i5i86i1sz9jl&rid=giphy.gif&ct=g" alt=""></a>
-     </div>
+    <div class="text-center">
+        <img id="btDev" class="imgBt" src="img/dev.png"/>
+        <img id="btGame" class="imgBt" src="img/gamer.png" alt="">
+        <img id="btCrypto" class="imgBt" src="img/crypto.png" alt="">
+  
+    </div>
+    <div class="row text-center mt-2">
+        <div class="col-3">
+            <img id="bottomLeftDev" class="bottomLeftDev" src="img/nodejs.png">
+            <img id="bottomLeftDev2" class="bottomLeftDev" src="img/react.png">
+        </div>
+        <div class="col-6">
+            <h3 id="titleCenter">FullStack Developer and IT operator</h3>
+            <p style="color: white ;" id="bodyCenter">After working for 9 years in a company as an IT specialist, from 2016 I started to be interested in everything related to web development.I started with the basics up to the creation of more complex web apps with the use of node.js and react.</p>
+         
+        </div>
+        <div class="col-3 text-center">
+            <img id="bottomRightDev" class="bottomRightDev" src="img/javaScript.png">
+            <img id="bottomRightDev2" class="bottomRightDev" src="img/network.png">
+        </div>
+      </div>
    
-            <div class="container" style="width: 100%; height:200px;">
-                
-                <div id="sky">
-                    <p style="position: absolute">Score : <span id="score">0</span> </p>
-                    <img style="position: absolute;" id="marioPg" width="50px" height="50px" src="images/mario.png" alt="">
-                    <img style="position: absolute ; display: none;" id="star" src="images/stars.gif" width="25px" height="25px" alt="">
-                </div>
-                <div id="bkFloor"></div>
-             </div>
-        
-        </div>
 
-        <div id="movDiv" class="text-center">
-           <img id="leftBt" style="width: 20%" src="images/left.png" alt="">
-           <img id="rightBt" style="width: 20%" src="images/right.png" alt="">
-           <img id="jumpBt" style="width: 20%" src="images/jump.png" alt="">
-        </div>
-
-     
-<script src="personal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
-
-

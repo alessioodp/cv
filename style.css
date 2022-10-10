@@ -1,101 +1,70 @@
+#top{
+
+    width: 100%;
+    height: 200px;
+  
+  
+}
+
+
+
 body{
-    
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-    font-family: 'Raleway', sans-serif;
-    transition: background-image 0.5s;
-    background-image: url("images/nature.jpeg");
-    background-repeat: no-repeat;
+    height: 100%; 
+    background-image: url("img/cover.webp");
     background-size: cover;
- 
- 
-}
-
-#bkFloor{
-    height: 30px;
-    background-image: url("images/floor.jpeg");
-    background-size: 20px ;
-    background-repeat: repeat;
-}
-
-#sky{
-    background-color: blue;
-    width: 100%;
-    height: 150px;
-    border-radius: 5px 5px 0px 0px;
-}
-
-#marioPg{
-    margin-top: 100px;
-    transition: margin-left 0.5s , margin-top 0.5s;
-
-}
-
-li{
-    color : white;
-
+    background-repeat: no-repeat;
+    transition: background-image 2s; 
+    backdrop-filter: blur(5px);
+  
 }
 
 
-p{
-    color: white;
-    font-size: 20px;
-}
 
-h1{
-    font-family: 'Sacramento', cursive;
-    font-size: 5.54rem;
-    margin-top: 30px;
-    color: #DBDFFD;
-    padding-top: 50px;
-    margin: auto;
-}
-
-h2{
-    margin-top: 0;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    color: #66BFBF;
-    font-weight: normal;
-    transition: color 2s;
-}
-
-h3{
-    font-family: 'Sacramento', cursive;
-    font-size: 2.54rem;
-    color:#DBDFFD;
-    margin: auto;
-    
-}
-
-#title{
-    color: black;
-    transition: color 1s;
-}
-
-
-h4{
-    color: #11999E;
-    font-size: large;
-    margin-top: 0;
-    padding-top: 50px;
-}
-
-
-.bottomDiv{
-    padding-top: 60px;
-    margin-top: 200px;
-    background-color: #d4f3e4;
-    width: 50%;
-    margin: auto;
-
-}
-
-.socialBottom{
-    
-    width: 60px;
+img{
+    width: 10%;
     height: auto;
-    border-radius: 100%;
+    margin: 10px;
 }
+
+h1,h3{
+    color: white;
+}
+
+#death{
+    width: 0px;
+    height: auto;
+    margin: 0px;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.imgBt{
+    transition: width 1s;
+}
+
+.imgBt:hover{
+    transition: width 1s;
+    border: solid 1px #6610f2;
+    border-radius: 50%;
+    width: 13%;
+}
+
+
+
+.bottomLeftDev{
+    position: relative;
+    opacity:1;
+    width:30%;
+    transition: opacity 4s;
+}
+
+.bottomRightDev{
+    position: relative;
+    opacity:1;
+   
+    width:30%;
+    transition: opacity 4s;
+}
+
 
