@@ -40,11 +40,14 @@ $("#btDev").click(()=>{
     $("#death").css("opacity","1")
     $("#mario").css("opacity","0")
 
+
     $("#bottomLeftDev").attr("src","img/nodeJs.png")
     $("#bottomRightDev").attr("src","img/javaScript.png")
 
     $("#bottomLeftDev2").attr("src","img/react.png")
     $("#bottomRightDev2").attr("src","img/network.png")
+
+    $("#listDev").css("opacity","1")
 
     $("#titleCenter").text("FullStack Developer and IT operator")
     $("#bodyCenter").text("After working for 9 years in a company as an IT specialist, from 2016 I started to be interested in everything related to web development.I started with the basics up to the creation of more complex web apps with the use of node.js and react.")
@@ -61,6 +64,8 @@ $("#btGame").click(()=>{
     $("#bottomLeftDev").attr("src","img/wow1.png")
     $("#bottomRightDev").attr("src","img/starcraft1.png")
     $("#bottomRightDev2").attr("src","img/stone.png")
+
+    $("#listDev").css("opacity","0")
 
     $("#bottomLeftDev2").attr("src","img/diablo.png")
 
@@ -79,6 +84,7 @@ $("#btCrypto").click(()=>{
 
     $("#bottomLeftDev2").attr("src","img/polygon.png")
     $("#bottomRightDev2").attr("src","img/link.png")
+    $("#listDev").css("opacity","0")
 
     $("#titleCenter").text("CryptoCurrency enthusiast  ")
     $("#bodyCenter").text("Since 2015 i stat to get interest in all the crypto world, invest in some of the coin like bitcoin, ethereum and chainlink. In the more recent years i also start to develope web app with web3 technology.")
