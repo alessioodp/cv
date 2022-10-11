@@ -41,7 +41,7 @@ $("#btDev").click(()=>{
     $("#mario").css("opacity","0")
 
 
-    $("#bottomLeftDev").attr("src","img/nodeJs.png")
+    $("#bottomLeftDev").attr("src","img/nodejs.png")
     $("#bottomRightDev").attr("src","img/javaScript.png")
 
     $("#bottomLeftDev2").attr("src","img/react.png")
