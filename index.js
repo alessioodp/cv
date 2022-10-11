@@ -13,7 +13,23 @@ const death = setInterval(()=>{
     }
 },10)
 
+var m = 0
+
+const mario = setInterval(()=>{
+    m = m + 0.1
+ 
+    $("#mario").css("margin-left",`${m}px`)
+
+    if (m===1000){
+        $("#mario").css("opacity","0")
+        clearInterval(mario)
+     
+    }
+},10)
+
 $("#btDev").click(()=>{
+
+    
  
     $("body").css("background-image","url(img/cover.webp)")
 
@@ -22,7 +38,7 @@ $("#btDev").click(()=>{
     $("#death").css("margin-left",`0px`)
     $("#death").css("margin-top",`0px`)
     $("#death").css("opacity","1")
-
+    $("#mario").css("opacity","0")
 
     $("#bottomLeftDev").attr("src","img/nodeJs.png")
     $("#bottomRightDev").attr("src","img/javaScript.png")
@@ -38,9 +54,10 @@ $("#btDev").click(()=>{
 
 $("#btGame").click(()=>{
 
-    
+    m=0
     $("body").css("background-image","url(img/marioPaper.png)");
-
+    $("#death").css("opacity","0")
+    $("#mario").css("opacity","1")
     $("#bottomLeftDev").attr("src","img/wow1.png")
     $("#bottomRightDev").attr("src","img/starcraft1.png")
     $("#bottomRightDev2").attr("src","img/stone.png")
@@ -55,7 +72,8 @@ $("#btGame").click(()=>{
 $("#btCrypto").click(()=>{
 
     $("body").css("background-image","url(img/cryptoPaper.jpg)")
-
+    $("#death").css("opacity","0")
+    $("#mario").css("opacity","0")
     $("#bottomLeftDev").attr("src","img/ethereum.png")
     $("#bottomRightDev").attr("src","img/blockchain.webp")
 
